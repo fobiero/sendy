@@ -1,0 +1,223 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pri-color: #EC8246;
+    --text-color: #18294E;
+    --banner-color: #F4F4F7;
+    --nav_link-color: #17224d;
+    --iconBG-color: #EFEFEF;
+    --header-bg: #EFEFEF;
+}
+
+.bg-light {
+    background-color: #fff !important;
+}
+
+.navbar-light .navbar-brand img {
+    width: 4rem;
+    height: auto;
+}
+
+.navbar-light .navbar-brand {
+    color: var(--pri-color);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.navbar-light .navbar-brand:hover {
+    color: var(--pri-color);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--nav_link-color);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+
+/* BANNER SECTION */
+
+.hero {
+    align-items: center;
+    padding: 8rem 0 5rem 0;
+}
+
+.main-tle {
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: var(--text-color);
+    padding: 0 0 1.5rem 0;
+}
+
+.main-desc {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.hero-img img {
+    width: 350px;
+    height: auto;
+}
+
+
+/* SERVICE SECTION  */
+
+.service {
+    text-align: center;
+    padding: 3rem 0 5rem 0;
+}
+
+.h-tle {
+    color: var(--pri-color);
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-transform: capitalize;
+}
+
+.h-desc {
+    padding-bottom: 2.5rem;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+}
+
+.serv-img img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+    margin: 0 0 2rem 0;
+    background-color: var(--iconBG-color);
+}
+
+
+/* BANNER  */
+
+.banner {
+    padding: 2.5rem 0;
+    background-color: var(--banner-color);
+    text-align: center;
+}
+
+.p-banner {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+
+/* FAQS  */
+
+.faqs {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+
+/* ORDER  */
+
+.par-form {
+    padding: 2rem 0;
+}
+
+.par-form h3 {
+    color: var(--text-color);
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+}
+
+.par-form p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+}
+
+input.form-control {
+    margin: 0 0 1rem 0;
+    /* width: 60%; */
+}
+
+
+/* ORDER DETAILS  */
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .h-tle-order {
+    font-size: 2.5rem;
+    color: var(--pri-color);
+    padding: 2rem 0;
+}
+
+.order-header {
+    padding: 1rem;
+    background-color: var(--header-bg);
+    color: var(--pri-color);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    margin-bottom: 1rem;
+    padding: 1.3rem .5rem;
+    /* background-color: var(--banner-color); */
+}
+
+.brd {
+    border-right: 2px solid #fff;
+}
+
+.order-cost {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.order-name {
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+.nw-or a {
+    color: var(--nav_link-color);
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+}
+
+.nw-or a:hover {
+    letter-spacing: normal;
+    color: var(--pri-color);
+    /* text-decoration: none; */
+    opacity: .7;
+}

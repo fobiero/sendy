@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+<!-- mainpage  -->
+
+{% block content %}
+<!-- navbar  -->
+{% include '_navbar.html' %}
+<!-- content  -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="header">
+                <div class="hd-or">
+                    <h1 class="h-tle-order">My Orders</h1>
+                </div>
+                <div class="nw-or">
+                    <a href="{% url 'order' %}">New Order</a>
+                    <!-- <button class="order-btn" type="submit"><a href="{% url 'order' %}">Create Order</a></button> -->
+                </div>
+            </div>
+            <div class="details">
+                <div class="order-body">
+                    <!-- order id && Date && From && To &&  Receipient name && Receipient cont  -->
+                    <table class="table">
+                        <tr>
+                            <th class="th-tle">OrderID</th>
+                            <th class="th-tle">Item_Name</th>
+                            <th class="th-tle">From</th>
+                            <th class="th-tle">To</th>
+                            <th class="th-tle">Receipient Name</th>
+                            <th class="th-tle">Date collected </th>
+                            <th class="th-tle">Status</th>
+                            <th class="th-tle">Amount</th>
+                        </tr>
+                        {% for order in orders %}
+                        <tr>
+                            <td class="td-dt">{{order.id}}</td>
+                            <td class="td-dt">{{order.item_name}}</td>
+                            <td class="td-dt">{{order.from_location}}</td>
+                            <td class="td-dt">{{order.to_location}}</td>
+                            <td class="td-dt">{{order.receipient_name}}</td>
+                            <td class="td-dt">{{order.placed_at | date:"SHORT_DATE_FORMAT"}}</td>
+                            <td class="td-dt">{{order.order_status}}</td>
+                            <td class="td-dt">{{order.cost.cost}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <!-- end details  -->
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+
+<!-- <div class="card card-body"> -->

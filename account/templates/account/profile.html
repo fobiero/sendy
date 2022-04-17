@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+<!-- mainpage  -->
+
+{% block content %}
+<!-- navbar  -->
+{% include '_navbar.html' %}
+<!-- content  -->
+<div class="container">
+    <div class="row">
+        <!-- <div class="prof-cont"> -->
+        <div class="col-md-8">
+            <div class="prof-data">
+                <div class="prof">
+                    <h4>User Name : {{user.username}}</h4>
+                </div>
+                <!-- end prof -->
+                <div class="prof-info">
+                    <div class="names">
+                        <p>Full Names : {{user.first_name}} </p>
+                    </div>
+                    <div class="contact">
+                        <p>Contact : {{user.contact}}</p>
+                    </div>
+                    <div class="email">
+                        <p>Email : {{user.email}}</p>
+                    </div>
+                    <div class="make-order">
+                        <button class="order-btn" type="submit"><a href="{% url 'order' %}">Place Order</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <!-- </div> -->
+    </div>
+</div>
+
+{% endblock content %}

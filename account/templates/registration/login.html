@@ -1,0 +1,18 @@
+{% extends 'base.html' %}{% load static %} {% load crispy_forms_tags %}
+<!-- main content  -->
+{% block content %} {% include '_navbar.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-md"></div>
+        <div class="col-md">
+            <h1>Login</h1>
+            <form action="{% url 'login' %}" method="POST" autocomplete="off">
+                {{form|crispy}} {% csrf_token %}
+                <p class="muted">Have an Account? <a href="{% url 'register' %}">Register</a></p>
+                <button type="submit" class="order-btn">Log In</button>
+            </form>
+        </div>
+        <div class="col-md"></div>
+    </div>
+</div>
+{% endblock content %}

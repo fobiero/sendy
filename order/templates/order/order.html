@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+<!-- mainpage  -->
+
+{% block content %}
+<!-- navbar  -->
+{% include '_navbar.html' %}
+<!-- content  -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="par-form">
+                <h3>Parcel Order Form</h3>
+                <p>Please fill in the form below</p>
+                <div>
+                    <form action="" method="post" autocomplete="off">
+                        {% csrf_token %} {{ form|crispy }}
+                        <br>
+                        <button class="order-btn" type="submit">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <!-- Load Map here -->
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

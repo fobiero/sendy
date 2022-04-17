@@ -1,0 +1,137 @@
+{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}
+<!-- mainpage  -->
+
+{% block content %}
+<!-- navbar  -->
+{% include '_navbar.html' %}
+<!-- content  -->
+<div class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="main-tle">Just place <br>we help you deliver</h1>
+                <p class="main-desc">
+                    We bring together everything that's required for <br> E-commerce and Customer brands to move goods to <br> customers and retailers across Africa and thus to making <br> trade easier.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="hero-img">
+                    <img src="{% static 'order/images/delivery.gif' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end hero  -->
+<!-- service section  -->
+<section class="service" id="products" data-aos="fade-up">
+    <div class="serv-info text-center">
+        <h1 class="h-tle">what we do</h1>
+        <p class="h-desc">We're helping online businesses grow and do more </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'order/images/products/sell-1.png' %}" alt="">
+                    </div>
+                    <div class="serv-cont">
+                        <h3 class="ser-tle">Sell</h3>
+                        <p class="serv-desc">Focus on making more sales <br> while we pick,pack & deliver <br>all your products.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end sell  -->
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'order/images/products/grow.png' %}" alt="">
+                    </div>
+                    <div class="serv-cont">
+                        <h3 class="ser-tle">Growth</h3>
+                        <p class="serv-desc">Increase your sales and scale<br> your business without <br> compromising quality of your <br>customers' experience.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end growth  -->
+            <div class="col-md-3">
+                <div class="sell-info">
+                    <div class="serv-img">
+                        <img src="{% static 'order/images/products/profits.png' %} " alt=" ">
+                    </div>
+                    <div class="serv-cont ">
+                        <h3 class="ser-tle ">Financing</h3>
+                        <p class="serv-desc ">You have access to fast, flexible<br> financing so you can buy more <br> stocks and manage cash flows.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end financing  -->
+            <div class="col-md-3 ">
+                <div class="sell-info ">
+                    <div class="serv-img ">
+                        <img src="{% static 'order/images/products/trust.png' %} " alt=" ">
+                    </div>
+                    <div class="serv-cont ">
+                        <h3 class="ser-tle ">Trust</h3>
+                        <p class="serv-desc ">Through reliable smooth<br> deliveries resulting in positive<br> experiences, return customers <br>and great relationships.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end trust  -->
+        </div>
+    </div>
+</section>
+<!-- end service  -->
+<section class="banner" data-aos="fade-up ">
+    <p class="p-banner">A Customer friendly medium for convinient produts distribution</p>
+    <!-- <button class="get-started"><a href="#">get started</a></button> -->
+</section>
+
+<section class="faqs" data-aos="fade-up ">
+    <h3 class="h-tle" id="faqs">FAQ's</h3>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-6 ">
+                <div class="faqs-data">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              What are your Rates? 
+                            </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">We proide different rates based on different Locations and thus no flat rate!
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              How long does it take to deliver? 
+                            </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Parcel delivery is our priority and thus we make it our level best to ensure our customer satisifaction and on due time.
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              What are your coverages? 
+                            </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Currently we are based and limited to specific routes for delivery. Kindly check the routes listed on the parcel destination list available.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row-1  -->
+                </div>
+            </div>
+</section>
+
+{% endblock content %}
