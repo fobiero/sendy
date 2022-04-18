@@ -33,8 +33,8 @@ def order(request):
             to_location = request.POST.get('to_location')
 
             price = TransportCost.objects.filter(from_location = from_location, to_location = to_location)
-            print('##########')
-            print(cur_price)
+            # print('##########')
+            # print(cur_price)
             for price in price:
                 if price.to_location == to_location and price.from_location == from_location:
                     cur_price = price
