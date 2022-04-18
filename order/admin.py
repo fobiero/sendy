@@ -3,3 +3,4 @@ from .models import *
 
 admin.site.register(TransportCost)
 admin.site.register(Order)
+# admin.site.register(CalcDistance)

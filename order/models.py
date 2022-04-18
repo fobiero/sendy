@@ -14,7 +14,7 @@ class TransportCost(models.Model):
         return self.to_location
 
 class Order(models.Model):
-    LOCATION_CHOICES = (('Nairobi', 'Nairobi'), ('Mombasa', 'Mombasa'), ('Kisumu', 'Kisumu'), ('Embu', 'Embu'), ('Nakuru', 'Nakuru'))
+    LOCATION_CHOICES = (('Nairobi', 'Nairobi'), ('Mombasa', 'Mombasa'), ('Kisumu', 'Kisumu'), ('Nakuru', 'Nakuru'))
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     item_name = models.CharField(max_length=100) 
@@ -26,8 +26,12 @@ class Order(models.Model):
     receipient_contact = models.IntegerField() #Contact
     placed_at = models.DateField(auto_now=True) #date when item was shipped
     order_status = models.CharField(max_length=100, default='on_transit') # on transit, pending or delived.
-    cost = models.ForeignKey(TransportCost, on_delete=models.CASCADE, blank=False)
+
+    price = models.ForeignKey(TransportCost,on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.item_name
+
+
+# calculate distance 
 

@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 # from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -27,9 +26,25 @@ def order(request):
     if request.method == 'POST':
         form = Place_OrderForm(request.POST)
         if form.is_valid():
+
+            cur_price = {}
+
+            from_location = request.POST.get('from_location')
+            to_location = request.POST.get('to_location')
+
+            price = TransportCost.objects.filter(from_location = from_location, to_location = to_location)
+            print('##########')
+            print(cur_price)
+            for price in price:
+                if price.to_location == to_location and price.from_location == from_location:
+                    cur_price = price
+                    # print('##########')
+                    # print(cur_price)
             new_order = form.save(commit=False)
             new_order.user = cur_user
+            new_order.price = cur_price
             new_order.save()
+
             messages.success(request, 'update successful!')
             return redirect('details')
   
@@ -51,7 +66,7 @@ def order(request):
 def details(request):
     orders = Order.objects.filter(user = request.user)
 
-    return render(request, 'order/details.html')
+    return render(request, 'order/details.html',{'orders':orders})
 
 # class OrderListView(LoginRequiredMixin,ListView):
 #     model = Order
@@ -75,3 +90,5 @@ def details(request):
 #         if self.request.user == order.user_id:
 #             return True
 #         return False
+
+
